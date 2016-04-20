@@ -6,7 +6,18 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <img src="encabezado-unam.gif" width="977" height="102" alt="encabezado-unam"/>
+
+        <h:form>
+        <h:outputText value="area"/>
+        <h:inputText value="#{publicaBean.profesorPublica.area}"/>
+        <br/>
+        <h:outputText value="tipo"/>
+        <h:inputText value="#{publicaBean.profesorPublica.tipo}" />           
+        <br/>
+        <h:commandButton actionListener="#{publicaBean.insertarPublicacion()}" value="publicar"/>
+        </h:form>
+                     
     </h:body>
 </html>
 
