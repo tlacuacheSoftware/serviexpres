@@ -25,6 +25,7 @@ import modelo.sql.Tipo;
 @ManagedBean
 public class NuevaActibidadBean implements Serializable {
     
+    /// atributos iguales alos del los pojos
     private int idActividad;
      private Area area;
      private Profesor profesor;
