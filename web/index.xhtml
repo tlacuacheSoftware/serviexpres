@@ -13,36 +13,36 @@
         <h:form>
             <h:panelGrid style="margin: 0 auto;">
                 <h:outputText value="id_actividad"/>
-                <h:inputText value="#{publicaBean.profesorPublica.idActividad}"/>
-                
-                <h:outputText value="id_Profesor"/>
-                <h:inputText value="#{publicaBean.profesorPublica.profesor.idProfesor}"/>
-
-                <h:outputText value="id_tipo"/>
-                <h:inputText value="#{publicaBean.profesorPublica.tipo.idTipo}"/>
+                <h:inputText value="#{nuevaActibidadBean.idActividad}"/>
 
                 <h:outputText value="area"/>
-                <h:inputText value="#{publicaBean.profesorPublica.area.idArea}"/>
+                <h:inputText value="#{nuevaActibidadBean.area}"/>
+                
+                <h:outputText value="id_Profesor"/>
+                <h:inputText value="#{nuevaActibidadBean.profesor}"/>
 
+                <h:outputText value="id_tipo"/>
+                <h:inputText value="#{nuevaActibidadBean.tipo}"/>
+             
                 <h:outputText value="i_CupoDisponible"/>
-                <h:inputText value="#{publicaBean.profesorPublica.ICupodisponible}"/>
+                <h:inputText value="#{nuevaActibidadBean.ICupodisponible}"/>
 
                 <h:outputText value="i_CupoMaxi"/>
-                <h:inputText value="#{publicaBean.profesorPublica.ICupomaximo}"/>
+                <h:inputText value="#{nuevaActibidadBean.ICupomaximo}"/>
 
                 <h:outputText value="s_Nombre"/>
-                <h:inputText value="#{publicaBean.profesorPublica.SNombre}"/>
+                <h:inputText value="#{nuevaActibidadBean.SNombre}"/>
 
                 <h:outputText value="s_Descripcion"/>
-                <h:inputText value="#{publicaBean.profesorPublica.SDescripciom}" />           
+                <h:inputText value="#{nuevaActibidadBean.SDescripciom}"/>
 
                 <h:outputText value="f_fechaModificacion aaaa/mm/dd"/>
-                <h:inputText value="#{publicaBean.profesorPublica.FFechadescripion}"/>
+                <h:inputText value="#{nuevaActibidadBean.FFechamodificacion}"/>
 
                 <h:outputText value="f_fechaDescripcion aaaa/mm/dd"/>
-                <h:inputText value="#{publicaBean.profesorPublica.FFechadescripion}"/>
+                <h:inputText value="#{nuevaActibidadBean.FFechadescripion}"/>
                 
-                <h:commandButton actionListener="#{publicaBean.insertarPublicacion()}" value="publicar"/>
+                <h:commandButton actionListener="#{nuevaActibidadBean.guardarActividad()}" value="publicar"/>
             </h:panelGrid>
             
         </h:form>
