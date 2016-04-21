@@ -6,18 +6,49 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <img src="encabezado-unam.gif" width="977" height="102" alt="encabezado-unam"/>
+        
+        
+        <h:graphicImage value="encabezado-unam.gif" width="977" height="102" style="margin: 0 auto;" />
 
         <h:form>
-        <h:outputText value="area"/>
-        <h:inputText value="#{publicaBean.profesorPublica.area}"/>
-        <br/>
-        <h:outputText value="tipo"/>
-        <h:inputText value="#{publicaBean.profesorPublica.tipo}" />           
-        <br/>
-        <h:commandButton actionListener="#{publicaBean.insertarPublicacion()}" value="publicar"/>
+            <h:panelGrid style="margin: 0 auto;">
+                <h:outputText value="id_actividad"/>
+                <h:inputText value="#{publicaBean.profesorPublica.idActividad}"/>
+                
+                <h:outputText value="id_Profesor"/>
+                <h:inputText value="#{publicaBean.profesorPublica.profesor.idProfesor}"/>
+
+                <h:outputText value="id_tipo"/>
+                <h:inputText value="#{publicaBean.profesorPublica.tipo.idTipo}"/>
+
+                <h:outputText value="area"/>
+                <h:inputText value="#{publicaBean.profesorPublica.area.idArea}"/>
+
+                <h:outputText value="i_CupoDisponible"/>
+                <h:inputText value="#{publicaBean.profesorPublica.ICupodisponible}"/>
+
+                <h:outputText value="i_CupoMaxi"/>
+                <h:inputText value="#{publicaBean.profesorPublica.ICupomaximo}"/>
+
+                <h:outputText value="s_Nombre"/>
+                <h:inputText value="#{publicaBean.profesorPublica.SNombre}"/>
+
+                <h:outputText value="s_Descripcion"/>
+                <h:inputText value="#{publicaBean.profesorPublica.SDescripciom}" />           
+
+                <h:outputText value="f_fechaModificacion aaaa/mm/dd"/>
+                <h:inputText value="#{publicaBean.profesorPublica.FFechadescripion}"/>
+
+                <h:outputText value="f_fechaDescripcion aaaa/mm/dd"/>
+                <h:inputText value="#{publicaBean.profesorPublica.FFechadescripion}"/>
+                
+                <h:commandButton actionListener="#{publicaBean.insertarPublicacion()}" value="publicar"/>
+            </h:panelGrid>
+            
         </h:form>
-                     
+
+
+
     </h:body>
 </html>
 
