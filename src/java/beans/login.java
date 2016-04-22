@@ -6,11 +6,13 @@
 package beans;
 
 import java.util.logging.Level;
-import javax.enterprise.context.RequestScoped;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
+
 import modelo.dao.LoginHelper;
 import modelo.sql.Alumno;
 
@@ -45,13 +47,13 @@ public class login {
                 faceContext.addMessage(null, message);
                 return "acceso";
             } catch (Exception ex) {
-            java.util.logging.Logger.getLogger(Alumno.class.getName()).log(Level.SEVERE, null, ex);
+                java.util.logging.Logger.getLogger(Alumno.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
-        }else{
-        message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "usuario ocontraseña invalido", null);
-        faceContext.addMessage(null, message);
-        return "index";
+
+        } else {
+            message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "usuario ocontraseña invalido", null);
+            faceContext.addMessage(null, message);
+            return "index";
         }
         return "index";
     }
