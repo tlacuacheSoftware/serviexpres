@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+        <h:form>
+
+            <h:panelGrid columns="2">
+                <img src="img/encabezado-unam.gif" />
+                <h:outputLabel value="opcion titulacion: "/>
+                <h:inputText value="#{publicaBean.profesorPublica.tipo}"/>
+
+                <h:outputLabel value="fecha inicio: "/>
+                <h:inputText value="#{publicaBean.profesorPublica.FFechadescripion}"/>
+
+                <h:outputLabel value="cupo: "/>
+                <h:inputText value="#{publicaBean.profesorPublica.ICupomaximo}"/>
+
+                <h:outputLabel value="descripcion: "/>
+                <h:inputText value="#{publicaBean.profesorPublica.SDescripciom}"/>
+            </h:panelGrid>
+
+            <h:commandButton actionListener="#{publicaBean.insertarPublicacion()}"
+                             value="publicar"/>
+
+
+        </h:form>
+
+
+    </h:body>
+</html>
+
