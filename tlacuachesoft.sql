@@ -5,7 +5,7 @@ CREATE TABLE ALUMNO(
 	s_correo character varying(100) unique
 );
 
-select * from Alumno;
+--select * from Alumno;
 insert into ALUMNO (id_Alumno,s_nombre, s_contrasenha, s_correo )values(1,'rodrigo','12345','correo');
 insert into ALUMNO (id_Alumno,s_nombre, s_contrasenha, s_correo )values(2,'valeria','12345','valeria@ciencias');
 
@@ -15,7 +15,7 @@ CREATE TABLE PROFESOR(
 	s_contrasenha character varying(32) ,
 	s_correo character varying(32) unique
 );
-select * from PROFESOR;
+--select * from PROFESOR;
 insert into PROFESOR (id_Profesor,s_nombre, s_contrasenha, s_correo )values(1,'karim','12345','karim@ciencias');
 insert into PROFESOR (id_Profesor,s_nombre, s_contrasenha, s_correo )values(2,'santigago','12345','santiago@ciencias');
 
@@ -62,8 +62,8 @@ CREATE TABLE SOLICITUD(
 	id_Alumno integer references ALUMNO (id_Alumno)
 );
 
-SELECT * FROM SOLICITUD;
+--SELECT * FROM SOLICITUD;
 insert into SOLICITUD(id_Solicitud,id_Actividad ,id_Profesor ,id_Alumno )values(1,1,1,2);
 insert into SOLICITUD(id_Solicitud,id_Actividad ,id_Profesor ,id_Alumno )values(2,1,1,1);
 
-select * from solicitud natural join area natural join alumno;
+--select * from solicitud natural join area natural join alumno;
