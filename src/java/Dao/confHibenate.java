@@ -3,30 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo.dao;
+package Dao;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 /**
  *
- * @author Rodrigo
+ * @author luis
  */
-public class ConfHibernate {
-    
+class confHibenate {
+
     private static final SessionFactory sessionFactory;
-    
-    static{
+
+    static {
         try {
-            
             sessionFactory = new Configuration().configure().buildSessionFactory();
         } catch (Exception e) {
-            System.out.println("Inital SessionFactory creation failed, "+e);
+            System.err.println("erroe " + e);
             throw new ExceptionInInitializerError(e);
         }
     }
-    
-    public static SessionFactory getSessionFactory(){
-    return  sessionFactory;
+
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
     }
 }

@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="TlacucheSoft" default="default" basedir=".">
-    <description>Builds, tests, and runs the project TlacucheSoft.</description>
+<project name="Proyecto_de_Prueba" default="default" basedir=".">
+    <description>Builds, tests, and runs the project Proyecto de Prueba.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
