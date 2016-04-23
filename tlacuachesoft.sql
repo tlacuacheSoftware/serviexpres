@@ -62,7 +62,7 @@ CREATE TABLE SOLICITUD(
 	id_Alumno integer references ALUMNO (id_Alumno)
 );
 
---SELECT * FROM SOLICITUD;
+----SELECT * FROM SOLICITUD;
 insert into SOLICITUD(id_Solicitud,id_Actividad ,id_Profesor ,id_Alumno )values(1,1,1,2);
 insert into SOLICITUD(id_Solicitud,id_Actividad ,id_Profesor ,id_Alumno )values(2,1,1,1);
 
